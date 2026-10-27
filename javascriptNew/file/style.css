@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: #1d1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: none;
+}
+.inp {
+  padding: 1.5rem 3rem;
+  border-radius: 0.3rem;
+  background: #28655c;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.inp:hover {
+  background: #0c413c;
+}
+.inp:active {
+  scale: 0.9;
+}
