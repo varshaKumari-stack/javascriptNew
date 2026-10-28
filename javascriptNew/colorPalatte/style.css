@@ -1,0 +1,126 @@
+@font-face {
+  font-family: main;
+  src: url("./fonts/Dearllane.ttf");
+}
+@font-face {
+  font-family: btn;
+  src: url("./fonts/Nathan\ Script\ OTF.otf");
+}
+@font-face {
+  font-family: color;
+  src: url("./fonts/Whisper\ Hearts.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: main;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #9cb6db, #7d7c7c);
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  position: relative;
+  font-size: 2.5rem;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: #1c90ca;
+  border-radius: 2px;
+}
+
+.generate-btn {
+  background: linear-gradient(45deg, #1c90ca, #db5b8e);
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  font-family: btn;
+  margin-bottom: 2rem;
+}
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(182, 126, 234, 0.3);
+}
+.generate-btn:active {
+  transform: translateY(0);
+}
+.color-palette {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+.color-box {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.color-box:hover {
+  transform: translateY(-5px);
+}
+.color {
+  height: 120px;
+  cursor: pointer;
+}
+
+.color-info {
+  background: #fff;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.hex-val {
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  font-family: color;
+}
+.copy-btn {
+  cursor: pointer;
+  color: #2089df;
+  transition: color 0.2s;
+}
+.copy-btn:hover {
+  color: #0f426c;
+}
+
+@media (max-width: 768px) {
+  .color-palette {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
